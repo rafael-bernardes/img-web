@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template/template.xhtml">
+	<ui:define name="content">
+		<h:form>
+		    <div class="row" align="center" >
+		    	<p:fieldset style="max-width: 800px">
+				<h:outputText value="Nesta funcionalidade, é possível coletar dados geográficos atualizados do IBGE e imagens atualizadas de satélite para composição de infraestrutura de dados espaciais (IDE) e atualizar a base de dados do STUR para cálculo de impostos como IPTU e ITR"/>
+				</p:fieldset>
+			</div>
+			<div class="row" align="center" >
+				<h:outputText value="Nome da cidade:" style="margin-rigth: 1em"></h:outputText>
+				<p:inputText value="#{atualizacao.nomeCidade}"></p:inputText>
+			</div>
+			<div class="row" align="center" style="margin-top: 2em;">
+				<p:commandButton value="Atualizar dados Geográficos" action="#{atualizacao.atualizarDados}" update=":header:growl"></p:commandButton>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
