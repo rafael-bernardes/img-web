@@ -19,6 +19,9 @@
 				<h:outputText value="Nome da cidade:" style="margin-rigth: 1em"></h:outputText>
 				<p:inputText value="#{atualizacao.nomeCidade}"></p:inputText>
 			</div>
+			<div class="row" align="center" >
+				<p:selectBooleanCheckbox itemLabel="Autenticar" value="#{atualizacao.adicionarIdentificacao}"></p:selectBooleanCheckbox>
+			</div>
 			<div class="row" align="center" style="margin-top: 2em;">
 				<p:commandButton value="Atualizar dados Geográficos" action="#{atualizacao.atualizarDados}" update=":header:growl"></p:commandButton>
 			</div>

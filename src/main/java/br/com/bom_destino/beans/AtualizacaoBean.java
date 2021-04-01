@@ -27,11 +27,17 @@ public class AtualizacaoBean implements Serializable {
 
 	private String nomeCidade;
 	
+	private boolean adicionarIdentificacao;
+	
 	public void atualizarDados() {
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		
 		try {
 			WebTarget target = client.target(PropertiesUtil.obterURI("gateway-api")).path("dados-geograficos");
+			
+			if(adicionarIdentificacao) {
+				target = target.queryParam("nome-cliente", "img-web");
+			}
 			
 			Response response = target.request().post(Entity.entity(nomeCidade, MediaType.APPLICATION_JSON));
 			
@@ -58,5 +64,13 @@ public class AtualizacaoBean implements Serializable {
 
 	public void setNomeCidade(String nomeCidade) {
 		this.nomeCidade = nomeCidade;
+	}
+
+	public boolean isAdicionarIdentificacao() {
+		return adicionarIdentificacao;
+	}
+
+	public void setAdicionarIdentificacao(boolean adicionarIdentificacao) {
+		this.adicionarIdentificacao = adicionarIdentificacao;
 	}
 }
