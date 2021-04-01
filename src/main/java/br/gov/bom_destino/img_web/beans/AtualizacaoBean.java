@@ -1,4 +1,4 @@
-package br.com.bom_destino.beans;
+package br.gov.bom_destino.img_web.beans;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -15,7 +15,7 @@ import javax.ws.rs.core.Response.Status.Family;
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 
-import br.com.bom_destino.utils.PropertiesUtil;
+import br.gov.bom_destino.img_web.utils.PropertiesUtil;
 
 
 @ManagedBean(name = "atualizacao")
