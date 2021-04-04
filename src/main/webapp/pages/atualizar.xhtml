@@ -10,20 +10,34 @@
 <ui:composition template="/template/template.xhtml">
 	<ui:define name="content">
 		<h:form>
-		    <div class="row" align="center" >
-		    	<p:fieldset style="max-width: 800px">
-				<h:outputText value="Nesta funcionalidade, é possível coletar dados geográficos atualizados do IBGE e imagens atualizadas de satélite para composição de infraestrutura de dados espaciais (IDE) e atualizar a base de dados do STUR para cálculo de impostos como IPTU e ITR"/>
-				</p:fieldset>
-			</div>
-			<div class="row" align="center" >
-				<h:outputText value="Nome da cidade:" style="margin-rigth: 1em"></h:outputText>
-				<p:inputText value="#{atualizacao.nomeCidade}"></p:inputText>
-			</div>
-			<div class="row" align="center" >
-				<p:selectBooleanCheckbox itemLabel="Autenticar" value="#{atualizacao.adicionarIdentificacao}"></p:selectBooleanCheckbox>
-			</div>
-			<div class="row" align="center" style="margin-top: 2em;">
-				<p:commandButton value="Atualizar dados Geográficos" action="#{atualizacao.atualizarDados}" update=":header:growl"></p:commandButton>
+			<div class="container">
+				<div class="row" align="center">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p:fieldset style="max-width: 800px">
+							<h:outputText
+								value="Nesta funcionalidade, é possível coletar dados geográficos atualizados do IBGE e imagens atualizadas de satélite para composição de infraestrutura de dados espaciais (IDE) e atualizar a base de dados do STUR para cálculo de impostos como IPTU e ITR" />
+						</p:fieldset>
+					</div>
+
+				</div>
+				<div class="row" align="center" style="margin-top: 1em">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<h:outputText value="Nome da cidade:"></h:outputText>
+						<p:inputText value="#{atualizacao.nomeCidade}" style="margin-left: 1em"></p:inputText>
+					</div>
+				</div>
+				<div class="row" align="center" style="margin-top: 1em">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p:selectBooleanCheckbox itemLabel="Autenticar"
+							value="#{atualizacao.adicionarIdentificacao}"></p:selectBooleanCheckbox>
+					</div>
+				</div>
+				<div class="row" align="center" style="margin-top: 1em">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<p:commandButton value="Atualizar dados Geográficos"
+							action="#{atualizacao.atualizarDados}" update=":header:growl"></p:commandButton>
+					</div>
+				</div>
 			</div>
 		</h:form>
 	</ui:define>
