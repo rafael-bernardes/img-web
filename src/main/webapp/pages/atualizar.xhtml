@@ -18,16 +18,16 @@
 			</div>
 			<div align="center" style="margin-top: 1em">
 				<h:outputText value="Nome da cidade:"></h:outputText>
-				<p:inputText value="#{atualizacao.nomeCidade}"
+				<p:inputText id="nomeCidade" value="#{atualizacao.nomeCidade}"
 					style="margin-left: 1em"></p:inputText>
 			</div>
 			<div align="center" style="margin-top: 1em">
-				<p:selectBooleanCheckbox itemLabel="Autenticar"
+				<p:selectBooleanCheckbox id="sbcIdentificacao" itemLabel="Autenticar"
 					value="#{atualizacao.adicionarIdentificacao}"></p:selectBooleanCheckbox>
 			</div>
 			<div align="center" style="margin-top: 1em">
 				<p:commandButton value="Atualizar dados Geográficos"
-					action="#{atualizacao.atualizarDados}" update=":header:growl"></p:commandButton>
+					action="#{atualizacao.atualizarDados}" update=":header:growl nomeCidade sbcIdentificacao"></p:commandButton>
 			</div>
 		</h:form>
 	</ui:define>

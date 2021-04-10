@@ -47,6 +47,9 @@ public class AtualizacaoBean implements Serializable {
 				FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Dados geográficos atualizados com sucesso", ""));
 			}
 			
+			nomeCidade = "";
+			adicionarIdentificacao = Boolean.FALSE;
+			
 		} catch (IllegalArgumentException e) {
 			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, FALHA_AO_ATUALIZAR_DADOS_GEOGRAFICOS, e.getMessage()));
 		} catch (NullPointerException e) {
