@@ -14,7 +14,7 @@
 		</p:submenu>
 		<f:facet name="options">
 			<p:outputLabel value="Bem vindo, #{login.login}" style="margin-right: 2em;"></p:outputLabel>
-			<p:commandButton value="Logout" icon="ui-icon-extlink" action="#{login.logout}" />
+			<p:commandButton value="Logout" icon="ui-icon-extlink" action="#{login.logout}" ajax="false" />
 		</f:facet>
 	</p:menubar>
 </h:form>

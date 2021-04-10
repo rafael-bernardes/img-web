@@ -16,14 +16,14 @@ public class LoginBean implements Serializable {
 	private String login;
 	private String senha;
 	
-	public void login() {
+	public String login() {
 		Faces.setSessionAttribute("usuario-logado", login);
-		Faces.redirect("/img-web/pages/home.xhtml", new Object[0]);
+		return "/pages/home";
 	}
 	
-	public void logout() {
+	public String logout() {
 		Faces.invalidateSession();
-		Faces.redirect("/img-web/login.xhtml", new Object[0]);
+		return "/login?faces-redirect=true";
 	}
 	
 	public String getLogin() {
